@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template/layout/base :: babo(~{::title},~{::link})">
+    <!-- base.html의 common_header가 여기 전부를 교체한다. ==== -->
+    <!-- ~{::title} : 타이틀 태그 통째로 title에 넣어버림  => base.html의 ${title}에 태그 통째로 바꿔버림-->
+    <!-- ~{::link} : 링크 태그 둘 다 link에 넣어버림. th:replace=${links}로 두 태그가 나옴 -->
+    <title>메인 타이틀</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/themes/smoothness/jquery-ui.css}">
+    <!-- main.html의 header -->
+</head>
+<body>
+메인 컨텐츠
+</body>
+</html>
